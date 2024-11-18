@@ -1,180 +1,188 @@
-<!-- index.html -->
-<!DOCTYPE html> 
-<html lang="en"> 
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> web page </title>
+        <style>
+        body{
+            background-image: url("images.jpg");
+            background-position: fixed;
+            background-size:cover;
+            background-repeat: no-repeat;
+            
+        
+        }
+        h1{
+            color:white;
+            text-align: center;
+            text-transform: uppercase;
+            margin-right: 1000px;
+        }
+        .td{
+            display: flex;
+            text-decoration: none;
+            margin-left: 00px;
+            margin-top: 0px;
+            padding-bottom: 00px;
+            margin-right: 00px;
+        
+        }
+        .td{
+            display: flex;
+            text-decoration: none;
+            color: white; 
+        margin: 00px 00pxp;
+        padding-left: 100px;
+        padding-right: 00px;
+        margin-top: 5px;
+        margin-right: 00px;
+        }
+         li :hover{
+            color:gold;
+        }
+        li a{
+            text-decoration: none;
+            color: white;
+        }
+        .button{
+            color: black;
+            background-color: white;
+            border-radius: 10px;
+        
+        }
+        
+        .src{
+            height: 25px;
+            border-radius: 10px;
+            background-color: white;
+        }
+        .p{
+            color: white;
+            margin-left: 30px;
+            font-size: 20px;
+            margin-bottom: 00px;
+        }
+        .login{
+            text-decoration: none;
+            margin-left: 80px;
+            background-color: orange;
+            height: 40px;
+            width: 120px;
+            border-radius: 20px;
+        }
+        div.login:hover{
+            text-decoration: none;
+            background-color: white;
+        }
+        .form{
+            color: white;
+            width: 250px;
+            height: 380px;
+            background:linear-gradient(to top, rgba(0,0,0,0,8) ,rgba(0,0,0,0,8)) ;
+            position: absolute;
+            top: 60px;
+            left:570px ;
+            border-radius: 10px;
+            padding: 25px;
+            
+        
+        }
+        a.first{
+            padding-bottom: 00px;
+            background-color: transparent;
+        }
+        .submit{
+            margin-left: 50px;
+            margin-top: 20px;
+            height: 30px;
+            width: 80px;
+            border-radius: 20px;
+            background-color: orange;
+        }
+        input{
+            background-color: transparent;
+        }
+        .res{
+            margin-bottom: 20px;
+            text-align: center;
+            margin-left: 10px;
+        }
+        .submit:hover{
+        background-color: white;
+        }
+        .loin.log{
+            text-decoration: none;
+        }
+        @media only screen and (max-width:900px){
+        .td{
+            display: block;
+            flex-direction: column;
+            text-align: center;
+            margin-left: -100px;
+            padding-top: 20px;
+        }
+        .form{
+            flex-direction:row-reverse;
+            text-align: left;
+            margin-left: -450px;
+            margin-top: 900px;
+            color: black;
+        }
+        .button{
+            height: 30px;
+        }
+        }
+        @media only screen and (max-width:242px){
+            .form{
+                margin-top: 600px;
+            }
+        }
+</style>
+<script src="registration.js"></script>
+    </head>
+    <body>
+       
+        
+        <ul class="td">
+            <tr class="td">
+            
+            <li class="td"><a href="index.html">HOME</a</li>
+            <li class="td" ><a href="/bhavesh.html">ABOUT US</a></li>
+            <li class="td" ><a href="cont.html">CONTACT US</a></li>
+            <li class="td"> <a href="search.html"><input  class="src" type="src" placeholder="text in"> <button class="button" type="src">serch </button> </a>
+                <br>
+            </li>
+            
+             
+            </tr>
+        </ul>
+            <div>
+                <h1>WEL COME TO MY WEBSITE DEVELOPING PAGE</h1>
+                </div>         
+<p class="p">if you want to study about website.<br> how to develop a web site <br>or you can also download pdf of
+<br> like java, html,css,javascript,php ,c<br>c++,ethical hacking etc.
+</p>
+<br>
+<button class="login"><a href="Login.html"><div class="log">LOGIN</div></a></button>
 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content= 
-        "width=device-width, initial-scale=1.0"> 
-    <title>Pagination Example</title> 
-    <link rel="stylesheet" href="style.css"> 
-    <script>
-      //script.js 
-const cardsPerPage = 4; // Number of cards to show per page 
-const dataContainer = document.getElementById('data-container'); 
-const pagination = document.getElementById('pagination'); 
-const prevButton = document.getElementById('prev'); 
-const nextButton = document.getElementById('next'); 
-const pageNumbers = document.getElementById('page-numbers'); 
-const pageLinks = document.querySelectorAll('.page-link'); 
+<form class="form">
+    <button class="res">
+    For Registration
+    </button>
+    <br>
+ <a class="first">  FIRST NAME:<input type="teXt" placeholder="FIRT NAME" maxlength="20"/></a>
+ <br>
+ LAST NAME:<input type="text" placeholder="LAST NAME"/>
+ <br>
+ E-MAIL: 
+ <br>
+    <input type="email" placeholder="email@gamil.com"/>
+    <br>
+    PASSWORD:<input type="password" placeholder="PASSWORD" maxlength="8" minlength="8"/>
+    <br>
+    PHONE NO:<input type="tel" placeholder="PHONE NUMBER" name="phone" maxlength="10" minlength="10"/>
+    <br>
+  <input class="submit" type="submit" placeholder="SUBMIT" name="SUBMIT"/>
+</form>
 
-const cards = 
-    Array.from(dataContainer.getElementsByClassName('card')); 
-
-// Calculate the total number of pages 
-const totalPages = Math.ceil(cards.length / cardsPerPage); 
-let currentPage = 1; 
-
-// Function to display cards for a specific page 
-function displayPage(page) { 
-    const startIndex = (page - 1) * cardsPerPage; 
-    const endIndex = startIndex + cardsPerPage; 
-    cards.forEach((card, index) => { 
-        if (index >= startIndex && index < endIndex) { 
-            card.style.display = 'block'; 
-        } else { 
-            card.style.display = 'none'; 
-        } 
-    }); 
-} 
-
-// Function to update pagination buttons and page numbers 
-function updatePagination() { 
-    pageNumbers.textContent = 
-        `Page ${currentPage} of ${totalPages}`; 
-    prevButton.disabled = currentPage === 1; 
-    nextButton.disabled = currentPage === totalPages; 
-    pageLinks.forEach((link) => { 
-        const page = parseInt(link.getAttribute('data-page')); 
-        link.classList.toggle('active', page === currentPage); 
-    }); 
-} 
-
-// Event listener for "Previous" button 
-prevButton.addEventListener('click', () => { 
-    if (currentPage > 1) { 
-        currentPage--; 
-        displayPage(currentPage); 
-        updatePagination(); 
-    } 
-}); 
-
-// Event listener for "Next" button 
-nextButton.addEventListener('click', () => { 
-    if (currentPage < totalPages) { 
-        currentPage++; 
-        displayPage(currentPage); 
-        updatePagination(); 
-    } 
-}); 
-
-// Event listener for page number buttons 
-pageLinks.forEach((link) => { 
-    link.addEventListener('click', (e) => { 
-        e.preventDefault(); 
-        const page = parseInt(link.getAttribute('data-page')); 
-        if (page !== currentPage) { 
-            currentPage = page; 
-            displayPage(currentPage); 
-            updatePagination(); 
-        } 
-    }); 
-}); 
-
-// Initial page load 
-displayPage(currentPage); 
-updatePagination();  
-    </script>
-</head> 
-
-<body> 
-    <div id="data-container"> 
-        <h1> Pagination in HTML CSS & JavaScript</h1> 
-        <div class="card-container"> 
-            <div class="card"> 
-                <img src= 
-"img1.png"
-                    alt="Image 1"> 
-                <h3>mern full stack development classroom</h3> 
-                <p>This is the content of Card 1.</p> 
-            </div> 
-            <div class="card"> 
-                <img src= 
-"img2.png"
-                    alt="Image 2"> 
-                <h3>Dev Ops Live</h3> 
-                <p>This is the content of Card 2.</p> 
-            </div> 
-            <div class="card"> 
-                <img src= 
-"img3.png"
-                    alt="Image 3"> 
-                <h3>Gate Date science and artificial intelligence</h3> 
-                <p>This is the content of Card 3.</p> 
-            </div> 
-            <div class="card"> 
-                <img src= 
-" img4.png"
-                    alt="Image 4"> 
-                <h3>gate crash course 2024 </h3> 
-                <p>This is the content of Card 4.</p> 
-            </div> 
-            <div class="card"> 
-                <img src= 
-"img5.png "
-                    alt="Image 5"> 
-                <h3>complete test series product companies</h3> 
-                <p>This is the content of Card 5.</p> 
-            </div> 
-            <div class="card"> 
-                <img src= 
-"img6.png "
-                    alt="Image 6"> 
-                <h3>dsa to development coding guide</h3> 
-                <p>This is the content of Card 6.</p> 
-            </div> 
-            <div class="card"> 
-                <img src= 
-"img7.png "
-                    alt="Image 7"> 
-                <h3>geeks classes live</h3> 
-                <p>This is the content of Card 7.</p> 
-            </div> 
-            <div class="card"> 
-                <img src= 
-"img8.png "
-                    alt="Image 8"> 
-                <h3>dsa interview preparation classroom</h3> 
-                <p>This is the content of Card 8.</p> 
-            </div> 
-            <div class="card"> 
-                <img src= 
-"img9.png"
-                    alt="Image 9"> 
-                <h3>complete interview preparation</h3> 
-                <p>This is the content of Card 9.</p> 
-            </div> 
-            <div class="card"> 
-                <img src= 
-"img 10.png"
-                    alt="Image 10"> 
-                <h3>Data Structures With Python</h3> 
-                <p>This is the content of Card 10.</p> 
-            </div> 
-            <!-- Add more cards as needed -->
-        </div> 
-    </div> 
-
-    <div class="pagination" id="pagination"> 
-        <a href="#" id="prev">Previous</a> 
-        <a href="#" class="page-link" data-page="1">1</a> 
-        <a href="#" class="page-link" data-page="2">2</a> 
-        <a href="#" class="page-link" data-page="3">3</a> 
-        <a href="#" id="next">Next</a> 
-        <p id="page-numbers"> </p> 
-    </div> 
-
-    <script src="script.js"> </script> 
-</body> 
-
+    </body>
 </html>

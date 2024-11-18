@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+      
+<head>
+    <title>
+        Creating Search Bar using HTML
+        CSS and Javascript
+    </title>
+      
+    <style>
+        #searchbar{
+     margin-left: 15%;
+     padding:15px;
+     border-radius: 10px;
+   }
+ 
+   input[type=text] {
+      width: 30%;
+      -webkit-transition: width 0.15s ease-in-out;
+      transition: width 0.15s ease-in-out;
+   }
+ 
+   /*When the input field gets focus,
+        change its width to 100% */
+   input[type=text]:focus {
+     width: 70%;
+   }
+ 
+  #list{
+    font-size:  1.5em;
+    margin-left: 90px;
+    text-decoration: none;
+   }
+ 
+.animals{
+   display: list-item;    
+  } 
+  .download{
+    display: inline;
+            text-decoration: none;
+            margin-left: 00px;
+            margin-top: 0px;
+            padding-left: 100px;
+            padding-bottom: 00px;
+            margin-right: 00px;
+            color: blue;
+  }
+    </style>
+</head>
+  
+<body>
+      
+    <!-- input tag -->
+    <input id="searchbar" onkeyup="search_animal()" type="text"
+        name="search" placeholder="Search ..">
+      
+    <!-- ordered list -->
+    <ul id='list' class="download">
+        <tr class="download">
+        <li class="animals"> <li class="animals"><a class="download" href="cont.html">contact</a></li></li>
+        <li class="animals" id="dowload"> <a class="download" href="/html/TutorialsPoint HTML.pdf">download html pdf</a></li>
+        <li class="animals">  <a class="download" href="https://youtu.be/G7VlFixSOOI">youtube</a></li>
+        <li class="animals"><a class="download" href="www.google.com">google</a></li>
+        <li class="animals"><a class="download" href="cont.html">information about this website</a></li>
+        <li class="animals"><a class="download" href="">every think about related to this </a></li>
+        <li class="animals"><a class="download" href="">download python pdf</a></li>
+        <li class="animals"><a class="download" href="">download java pdf</a></li>
+        <li class="animals"><a class="download" href=""></a></li>
+        <li class="animals"><a class="download" href=""></a></li>
+        <li class="animals"><a class="download" href=""></a></li>
+        <li class="animals"><a class="download" href=""></a></li>
+        <li class="animals"><a class="download" href=""></a></li>
+        <li class="animals"><a class="download" href=""></a></li>
+        <li class="animals"><a class="download" href=""></a></li>
+        <li class="animals"><a class="download" href=""></a></li>
+        <li class="animals"><a class="download" href=""></a></li>
+        <li class="animals"><a class="download" href=""></a></li>
+        <li class="animals"><a class="download" href=""></a></li>
+        <li class="animals"><a class="download" href=""></a></li>
+        </tr>
+
+    </ul>
+      
+    <!-- linking javascript -->
+    <script>
+    function search_animal() {
+        let input = document.getElementById('searchbar').value
+        input=input.toLowerCase();
+        let x = document.getElementsByClassName('animals');
+          
+        for (i = 0; i < x.length; i++) { 
+            if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                x[i].style.display="none";
+            }
+            else {
+                x[i].style.display="list-item";                 
+            }
+        }
+    }
+    </script>
+</body>
+  
+</html>
